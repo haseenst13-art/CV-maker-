@@ -3,64 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Maker</title>
+    <title>Syed Yavar Ahmed - CV Maker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="app">
 
+    <div class="form-box">
         <h1>CV Maker</h1>
-        <p>Create your professional CV</p>
+        <p>Owner: <strong>Syed Yavar Ahmed</strong></p>
 
-        <div class="form-section">
+        <h2>Personal Information</h2>
 
-            <h2>Personal Information</h2>
+        <input id="name" value="Syed Yavar Ahmed" placeholder="Full Name">
+        <input id="father" placeholder="Father Name">
+        <input id="phone" placeholder="Contact Number">
+        <input id="email" placeholder="Email Address">
+        <input id="address" placeholder="Present Address">
+        <input id="cnic" placeholder="CNIC Number">
+        <input id="status" placeholder="Marital Status">
+        <input id="nationality" value="Pakistani" placeholder="Nationality">
+        <input id="religion" placeholder="Religion">
+        <input id="languages" placeholder="Languages">
 
-            <input type="text" id="name" placeholder="Full Name">
-            <input type="email" id="email" placeholder="Email">
-            <input type="text" id="phone" placeholder="Phone Number">
-            <input type="text" id="address" placeholder="Address">
+        <h2>Objective</h2>
+        <textarea id="objective" placeholder="Career objective"></textarea>
 
-            <h2>Education</h2>
+        <h2>Academic Qualification</h2>
+        <textarea id="education" placeholder="Academic qualification"></textarea>
 
-            <textarea id="education" placeholder="Your education"></textarea>
+        <h2>Professional Experience</h2>
+        <textarea id="experience" placeholder="Professional experience"></textarea>
 
-            <h2>Skills</h2>
+        <h2>Reference</h2>
+        <textarea id="reference" placeholder="Reference"></textarea>
 
-            <textarea id="skills" placeholder="Your skills"></textarea>
+        <button onclick="generateCV()">Generate CV</button>
+    </div>
 
-            <h2>Experience</h2>
 
-            <textarea id="experience" placeholder="Your work experience"></textarea>
+    <div id="cv" class="cv">
 
-            <button onclick="generateCV()">Generate CV</button>
+        <header>
+            <h1 id="cv-name">Syed Yavar Ahmed</h1>
+            <p id="cv-contact"></p>
+        </header>
 
-        </div>
+        <section>
+            <h2>OBJECTIVE</h2>
+            <p id="cv-objective"></p>
+        </section>
 
-        <div id="cv-preview" class="cv-preview">
+        <section>
+            <h2>ACADEMIC QUALIFICATION</h2>
+            <p id="cv-education"></p>
+        </section>
 
-            <h1 id="preview-name">Your Name</h1>
+        <section>
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <p id="cv-experience"></p>
+        </section>
 
-            <p id="preview-contact">
-                Email | Phone | Address
-            </p>
+        <section>
+            <h2>PERSONAL INFORMATION</h2>
 
-            <h2>Education</h2>
-            <p id="preview-education">Your education will appear here.</p>
+            <div class="personal">
+                <p><strong>Father Name:</strong> <span id="cv-father"></span></p>
+                <p><strong>CNIC No:</strong> <span id="cv-cnic"></span></p>
+                <p><strong>Marital Status:</strong> <span id="cv-status"></span></p>
+                <p><strong>Nationality:</strong> <span id="cv-nationality"></span></p>
+                <p><strong>Religion:</strong> <span id="cv-religion"></span></p>
+                <p><strong>Languages:</strong> <span id="cv-languages"></span></p>
+                <p><strong>Present Address:</strong> <span id="cv-address"></span></p>
+            </div>
+        </section>
 
-            <h2>Skills</h2>
-            <p id="preview-skills">Your skills will appear here.</p>
-
-            <h2>Experience</h2>
-            <p id="preview-experience">Your experience will appear here.</p>
-
-        </div>
+        <section>
+            <h2>REFERENCE</h2>
+            <p id="cv-reference">Reference upon Request</p>
+        </section>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
